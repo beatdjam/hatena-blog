@@ -546,31 +546,6 @@ pre.lang-aa {
   line-height: 1.5;
 }
 
-
-/* @Module::Search */
-
-form.search-form input {
-  border: 1px solid #ccc;
-  vertical-align: middle;
-}
-
-.search-form .search-module-input {
-  width: 142px;
-  padding: 3px;
-  margin: 0;
-  font-size: 12px;
-}
-
-.search-form .search-module-button {
-  height: 23px;
-  width: 23px;
-  border: none;
-  text-indent: -999px;
-  cursor: pointer;
-  background: url('/images/theme/search_g.png') 50% 50% no-repeat;
-}
-
-
 /* @About */
 
 .page-about dt {
