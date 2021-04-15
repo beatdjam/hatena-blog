@@ -1,0 +1,654 @@
+@charset "utf-8";
+
+/* =============== reset css =============== */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+
+/* =============== link =============== */
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #929292;
+  text-decoration: underline;
+}
+
+
+/* =============== category =============== */
+
+.breadcrumb {
+  width: 1000px;
+  margin: 30px auto;
+  font-size: 16px;
+}
+
+
+/* =============== edit erea =============== */
+
+#top-editarea, #bottom-editarea {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+
+/* =============== source code view =============== */
+
+pre.code {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: #333;
+  color: #eee;
+  position: relative;
+  border-radius: 3px;
+}
+
+.code-title {
+  position: relative;
+}
+
+.code-title pre.code {
+  padding-top: 2.4em;
+}
+
+.code-title::before {
+  content: attr(data-title);
+  padding: 0 1em;
+  background: #666;
+  color: #fff8e1;
+  font-size: 0.8em;
+  border-radius: 3px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+/* =============== body =============== */
+
+body {
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+
+/* =============== blog title =============== */
+
+#blog-title {
+  border-bottom: 1px solid #000;
+}
+
+#blog-title-inner {
+  display: block;
+  background: url('https://cdn-ak.f.st-hatena.com/images/fotolife/k/kgsi/20130508/20130508182629.png') no-repeat center top;
+  padding: 70px 0;
+  margin: auto;
+}
+
+
+/* =============== content =============== */
+
+#content {
+  width: 1000px;
+  margin: 50px auto 30px auto;
+}
+
+#wrapper {
+  width: 756px;
+  float: left;
+  border-right: 1px solid #DEDEDE;
+  padding-right: 30px;
+}
+
+.page-archive #wrapper, .page-about #wrapper {
+  padding-right: 0px;
+  border-right: none;
+  background: none;
+}
+
+.entry a {
+  text-decoration: underline;
+}
+
+.entry-inner {
+  padding-bottom: 80px;
+}
+
+.entry-header {
+  width: 756px;
+  position: relative;
+}
+
+.date {
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  text-align: center;
+}
+
+.date a {
+  text-decoration: none;
+  color: #222;
+}
+
+.date .date-year, .date .date-month, .date .date-day {
+  font-weight: 700;
+}
+
+.entry-title {
+  margin-bottom: 15px;
+  line-height: 1.3;
+  position: relative;
+  width: 750px;
+}
+
+.page-archive .entry-title {
+  left: 0px;
+  width: 756px;
+}
+
+.entry-title a {
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
+}
+
+.categories {
+  width: 750px;
+  position: relative;
+  padding: 0 0 10px 0;
+  color: #fff
+}
+
+.page-archive .categories {
+  width: 756px;
+  left: 0px !important;
+  padding: 0 0 10px 0;
+}
+
+.categories a {
+  font-size: 10px;
+  padding: 3px 8px 3px 8px;
+  background: #999999;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff
+}
+
+.author, .entry-footer-time {
+  font-size: 11px;
+}
+
+.entry-content {
+  width: 750px;
+  position: relative;
+}
+
+.entry-header-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 13px;
+}
+
+.entry-footer {
+  width: 750px;
+  position: relative;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.entry-footer-section, .social-buttons {
+  margin-bottom: 15px;
+}
+
+.pager {
+  width: 750px;
+  position: relative;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: left;
+}
+
+#footer {
+  width: 100%;
+  border-top: 1px solid #DEDEDE;
+  text-align: center;
+  padding: 10px 0 30px 0;
+  line-height: 1.3;
+  font-size: 11px;
+}
+
+#footer-inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#footer address {
+  display: inline;
+}
+
+#footer .services {
+  display: inline;
+  margin: 0 7px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+#footer img {
+  vertical-align: middle;
+}
+
+
+/* =============== comment =============== */
+
+.entry-comment {
+  border-bottom: 1px solid #dfdfdf;
+  list-style: none;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.comment-user-name .hatena-id-icon {
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+.comment-user-name {
+  margin-bottom: 7px;
+}
+
+.comment-user-name a {
+  color: #222;
+  font-weight: bold;
+}
+
+.comment-content {
+  line-height: 1.5em;
+  margin-bottom: 7px;
+  word-wrap: break-word;
+}
+
+.comment-user-name, .comment-content {
+  font-size: 14px;
+}
+
+.comment-metadata, .comment-metadata a {
+  color: #aaa;
+}
+
+.leave-comment-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #DEDEDE;
+}
+
+a.leave-comment-title {
+  display: block;
+  text-decoration: none;
+}
+
+.leave-comment-title:hover {
+  background: #F6F6F6;
+}
+
+
+/* Entry-Content */
+
+.entry-content {
+  font-size: 14px;
+  line-height: 1.74;
+}
+
+.entry-content p {
+  margin: 0.7em 0 1em 0;
+}
+
+.entry-content img {
+  max-width: 100%;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  margin: 1em 0 1em 0;
+  line-height: 1.7;
+}
+
+.entry-content h1 {
+  font-size: 160%;
+}
+
+.entry-content h2 {
+  font-size: 150%;
+  border-left: 8px solid #333;
+  padding-left: 10px;
+}
+
+.entry-content h3 {
+  font-size: 130%;
+}
+
+.entry-content h4 {
+  font-size: 120%;
+}
+
+.entry-content h5 {
+  font-size: 110%;
+}
+
+.entry-content h6 {
+  font-size: 100%;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3 {
+  border-bottom: 2px solid #222;
+}
+
+.entry-content ul, .entry-content ol, .entry-content dd {
+  margin: 0 0 0 1.5em;
+  padding: 0;
+}
+
+.entry blockquote {
+  padding: 10px;
+  margin: 1em 0;
+  border: 1px solid #DEDEDE;
+}
+
+.entry blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.entry-content table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.entry-content table th, .entry-content table td {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+
+.entry-content table th {
+  background: #fafafa;
+}
+
+pre {
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+a.keyword {
+  text-decoration: none;
+  border-bottom: 1px solid #DEDEDE;
+  color: #222;
+}
+
+pre.lang-aa {
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.hatena-asin-detail li {
+  line-height: 1.4;
+}
+
+
+/* =============== side bar =============== */
+
+#box2 {
+  width: 180px;
+  float: right;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+.page-about #box2, .page-archive #box2 {
+  border-left: 1px solid #DEDEDE;
+  padding-left: 32px;
+}
+
+.hatena-module {
+  margin-bottom: 30px;
+}
+
+.hatena-module-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+  background: url('https://cdn-ak.f.st-hatena.com/images/fotolife/k/kgsi/20130508/20130508065220.gif') no-repeat left 0px;
+  min-height: 15px;
+  padding-left: 20px;
+  position: relative;
+  left: -41px;
+}
+
+.hatena-module-title a {
+  color: #222;
+  text-decoration: none;
+}
+
+.hatena-module-title a:hover {
+  text-decoration: underline;
+}
+
+.hatena-module .profile-icon {
+  margin-bottom: 5px;
+}
+
+.hatena-module .id {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.profile-description {
+  margin-bottom: 5px;
+}
+
+.hatena-module-body li {
+  list-style: none;
+  margin-bottom: 0.65em;
+}
+
+.hatena-module-body {
+  line-height: 1.5;
+}
+
+
+/* @Module::Search */
+
+form.search-form input {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.search-form .search-module-input {
+  width: 142px;
+  padding: 3px;
+  margin: 0;
+  font-size: 12px;
+}
+
+.search-form .search-module-button {
+  height: 23px;
+  width: 23px;
+  border: none;
+  text-indent: -999px;
+  cursor: pointer;
+  background: url('/images/theme/search_g.png') 50% 50% no-repeat;
+}
+
+
+/* @About */
+
+.page-about dt {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 2px;
+}
+
+.page-about dd {
+  margin-left: 0;
+  margin-bottom: 30px;
+}
+
+.page-about .entry-content img.profile-icon {
+  height: 16px;
+  width: 16px;
+}
+
+
+/* =============== archive =============== */
+
+.page-archive #main {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-archive #main-inner {
+  font-size: 14px;
+  text-align: left;
+}
+
+.page-archive #main-inner p {
+  margin-bottom: 1em;
+}
+
+.page-archive #main-inner h1 {
+  font-size: 18px;
+  margin: 1em 0 0.5em;
+}
+
+.page-archive #main-inner h1 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.page-archive #main-inner section {
+  margin-bottom: 30px;
+}
+
+.page-archive #main-inner .entry-title {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000;
+  text-decoration: none;
+}
+
+.page-archive #main-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-archive #main-inner li {
+  border-bottom: 1px solid #DEDEDE;
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+.page-archive #main-inner li .categories {
+  font-size: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.page-archive #main-inner h1 a:hover, .page-archive #main-inner .entry-title:hover {
+  text-decoration: underline;
+}
