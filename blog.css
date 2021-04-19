@@ -45,3 +45,19 @@ body {
 #blog-title {
   border-bottom: 1px solid #000;
 }
+
+/* =============== entry date =============== */
+.date-month + .hyphen {
+    display: block;
+    text-indent: -9999px;
+}
+
+.archive-date .date-day {
+    position: relative;
+    top: -10px;
+}
+
+/* =============== entry title =============== */
+.page-archive #main-inner h1 {
+    margin: 0;
+}
