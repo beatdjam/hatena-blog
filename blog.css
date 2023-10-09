@@ -59,6 +59,10 @@ body {
     padding-top: 5px;
 }
 
+.entry-content .table-of-contents li:last-child {
+    border-bottom: none;
+}
+
 .entry-content .table-of-contents a {
     text-decoration: none;
 }
