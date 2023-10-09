@@ -48,18 +48,18 @@ body {
     font-size: 26px;
 }
 
-.table-of-contents {
+.entry-content .table-of-contents {
     background-color: rgb(245,248,250);
     padding: 15px;
     list-style: none;
 }
 
-.table-of-contents li {
+.entry-content .table-of-contents li {
     border-bottom: 1px solid lightgray;
     padding-top: 5px;
 }
 
-.table-of-contents a {
+.entry-content .table-of-contents a {
     text-decoration: none;
 }
 
