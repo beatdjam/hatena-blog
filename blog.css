@@ -37,14 +37,35 @@ body {
   font-family: "Noto Sans Japanese", sans-serif;
 }
 
-/* =============== h2 =============== */
+/* =============== entry =============== */
+.entry-title a {
+  font-size: 26px;
+}
+
 .entry-content h2 {
     border-left: 10px solid #000;
     padding-left: 5px;
+    font-size: 26px;
+}
+
+.table-of-contents {
+    background-color: rgb(245,248,250);
+    padding: 15px;
+    list-style: none;
+}
+
+.table-of-contents li {
+    border-bottom: 1px solid lightgray;
+    padding-top: 5px;
+}
+
+.table-of-contents a {
+    text-decoration: none;
 }
 
 .entry-content p {
     font-size: 16px;
+    line-height: 2.25rem;
 }
 
 .archive-entry-header span.date-day {
