@@ -1,0 +1,30 @@
+/* PC版と同じCSSを読み込む */
+@import url("https://beatdjam.github.io/hatena-blog/blog.css");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+
+/* モバイル専用の設定 */
+.hatena-module-title,
+.profile-wrapper,
+.footer-action-wrapper,
+.touch-item-list,
+#header {
+    display:none;
+}
+
+.list-entry-article .thumb-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 0em;
+}
+
+.list-entry-header>.date {
+    color: white;
+    background: #333333;
+    padding: 0px 10px;
+}
+
+.header-image {
+    background-size:contain;
+}
+
+body {font-family:"Noto Sans Japanese", sans-serif;}
