@@ -354,8 +354,12 @@ body {
     color: var(--dm-text) !important;
   }
 
-  form.search-form input {
-    background: var(--dm-bg-sub) !important;
+  /*
+   * background のショートハンドは使わない。
+   * .search-module-button は background-image でアイコンを持つため潰れる。
+   */
+  .search-form .search-module-input {
+    background-color: var(--dm-bg-sub) !important;
     border-color: var(--dm-border) !important;
     color: var(--dm-text) !important;
   }
@@ -394,8 +398,10 @@ body {
   }
 
   /* ---- サイドバー検索ボタン ---- */
-  /* search_g.png はグレー固定でダーク背景だと潰れる */
+  /* search_g.png（グレーの虫眼鏡・透過PNG）はダーク背景だと潰れるので反転する */
   .search-form .search-module-button {
+    background-color: transparent !important;
+    border: none !important;
     filter: invert(1);
   }
 

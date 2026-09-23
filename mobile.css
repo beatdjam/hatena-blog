@@ -189,11 +189,18 @@ body {font-family:"Noto Sans Japanese", sans-serif;}
   }
 
   /* ---- search ---- */
+  /* background のショートハンドはボタンのアイコンを潰すので使わない */
   .search-form .search-module-input,
   .search-result-form .search-result-input {
-    background: var(--dm-bg-sub) !important;
+    background-color: var(--dm-bg-sub) !important;
     border-color: var(--dm-border) !important;
     color: var(--dm-text) !important;
+  }
+
+  .search-form .search-module-button {
+    background-color: transparent !important;
+    border: none !important;
+    filter: invert(1);
   }
 
   /* ---- ソーシャルボタン ---- */
