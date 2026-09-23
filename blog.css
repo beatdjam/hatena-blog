@@ -175,22 +175,9 @@ body {
 
 /* =============== blog header =============== */
 /*
- * ヘッダ画像は #blog-title-inner の background-image（黒一色・透過PNG）。
- * テーマ/はてな側は .header-image-only #blog-title を transparent にしているため、
- * 上書きには !important が必要。
- * 帯にアクセントカラーを敷き、ロゴは反転して白抜きにする。
- * #title / #blog-description は header-image-only で不可視なので反転の影響はない。
+ * 「読者になる」は白文字＋半透明黒（rgba(0,0,0,.4) 相当）のため、
+ * 白いヘッダ画像に重なるとほぼ読めない。塗りを濃くする。ライト/ダーク共通。
  */
-#blog-title {
-  background: linear-gradient(135deg, #5b6382 0%, #4a4459 100%) !important;
-}
-
-.header-image-only #blog-title-inner,
-.header-image-enable #blog-title-inner {
-  filter: invert(1);
-}
-
-/* 「読者になる」は白文字＋半透明黒のため、明るい帯だと潰れる */
 .blog-controlls-subscribe-btn {
   background-color: rgba(0, 0, 0, 0.45) !important;
   color: #fff !important;
@@ -217,6 +204,24 @@ body {
     --dm-border: #3a3a3e;
     --dm-link: #8ab4f8;
     --dm-link-hover: #aecbfa;
+  }
+
+  /* ---- header ---- */
+  /*
+   * ヘッダ画像は #blog-title-inner の background-image（黒一色・透過PNG）。
+   * ダーク背景では潰れるため、帯にアクセントカラーを敷きロゴを反転して白抜きにする。
+   * 帯と反転はセット（帯だけ敷くと黒ロゴが読めない）。
+   * テーマ/はてな側が .header-image-only #blog-title を transparent にしているため
+   * 上書きには !important が必要。
+   * #title / #blog-description は header-image-only で不可視なので反転の影響はない。
+   */
+  #blog-title {
+    background: linear-gradient(135deg, #5b6382 0%, #4a4459 100%) !important;
+  }
+
+  .header-image-only #blog-title-inner,
+  .header-image-enable #blog-title-inner {
+    filter: invert(1);
   }
 
   /* ---- base ---- */
